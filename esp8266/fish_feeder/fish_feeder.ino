@@ -16,7 +16,7 @@
 
 // --- ⚙️ Calibration Values ---
 // ค่า calibration factor ของโหลดเซลล์ (ต้องปรับให้ตรงกับแผ่นโหลดเซลล์จริงของคุณ)
-#define CALIBRATION_FACTOR 2280.0 
+#define CALIBRATION_FACTOR 220.4
 
 // --- Objects ---
 HX711 scale;
