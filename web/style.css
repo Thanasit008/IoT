@@ -1,0 +1,275 @@
+/* ===========================
+   Fish Feeder IoT Dashboard
+   =========================== */
+
+body {
+    background: #f4f7fb;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Card */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+.card-header {
+    font-weight: bold;
+    background: #0d6efd;
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+}
+
+/* Status */
+
+#statusText {
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+.online {
+
+    color: #198754;
+
+}
+
+.offline {
+
+    color: #dc3545;
+
+}
+
+/* Weight */
+
+#weight {
+
+    font-size: 52px;
+
+    font-weight: bold;
+
+}
+
+#foodStatusLabel {
+    font-size: 18px;
+}
+
+#daysRemainingText {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.progress {
+
+    height: 28px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+}
+
+.progress-bar {
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}
+
+/* Button */
+
+.btn {
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+}
+
+.btn-success {
+
+    font-size: 20px;
+
+}
+
+.btn-danger {
+
+    font-size: 20px;
+
+}
+
+/* Schedule */
+
+#scheduleList li {
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+}
+
+/* Alert */
+
+#alertList li {
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+}
+
+/* Table */
+
+.table th {
+
+    background: #0d6efd;
+
+    color: white;
+
+}
+
+.table td {
+
+    vertical-align: middle;
+
+}
+
+/* Last Seen */
+
+#lastSeen {
+
+    font-size: 15px;
+
+    color: gray;
+
+}
+
+/* Auth Modal (ใส่ไอดีเครื่อง + รหัส) */
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 15px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 15px;
+}
+
+/* Footer (เผื่อใช้ในอนาคต) */
+
+.footer {
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: gray;
+
+}
+
+/* Loading Animation */
+
+.loading {
+
+    animation: pulse 1.5s infinite;
+
+}
+
+@keyframes pulse {
+
+    0% {
+
+        opacity: .3;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: .3;
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    #weight{
+
+        font-size:40px;
+
+    }
+
+    #statusText{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar-brand{
+
+        font-size:20px;
+
+    }
+
+    #weight{
+
+        font-size:34px;
+
+    }
+
+    #statusText{
+
+        font-size:26px;
+
+    }
+
+    .btn{
+
+        font-size:16px;
+
+    }
+
+}

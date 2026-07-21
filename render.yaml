@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: fish-feeder-iot
+    runtime: node
+
+    plan: free
+
+    buildCommand: npm install
+
+    startCommand: node server/server.js
+
+    autoDeploy: true
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: PORT
+        value: 3000
+
+      - key: MQTT_HOST
+        sync: false
+
+      - key: MQTT_PORT
+        sync: false
+
+      - key: MQTT_USER
+        sync: false
+
+      - key: MQTT_PASS
+        sync: false
