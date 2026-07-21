@@ -123,11 +123,14 @@ app.post('/api/stop', (req, res) => {
 });
 
 // ----------------------------------------------------
-// 4. Server Start
+// 4. Server Start (ปรับสำหรับ Vercel Serverless)
 // ----------------------------------------------------
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Smart Fish Feeder API is running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Smart Fish Feeder API is running on port ${PORT}`);
+  });
+}
 
+// สำหรับให้ Vercel นำ Express app ไปใช้ทำ Serverless Function
 module.exports = app;
